@@ -1,0 +1,12 @@
+# Helm values for the keycloak postgres database - chart: bitnami/postgresql
+auth:
+  username: "postgres"
+  password: "postgres"
+  database: "keycloak"
+
+primary:
+  service:
+    type: NodePort
+
+    nodePorts:
+      postgresql: "31001"
